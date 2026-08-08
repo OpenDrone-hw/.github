@@ -53,8 +53,12 @@ Hardware is **CERN-OHL-S-2.0**: fork it, sell it, but publish your changes.
 OSHWA certified open source hardware: 
 [OpenFC-Lite](https://certification.oshwa.org/be000026.html),
 [OpenFC-Lite-Mini](https://certification.oshwa.org/be000027.html),
-[OpenESC-20x20](https://certification.oshwa.org/be000028.html) and
-[OpenESC-30x30](https://certification.oshwa.org/be000029.html).
+[OpenESC-20x20](https://certification.oshwa.org/be000028.html),
+[OpenESC-30x30](https://certification.oshwa.org/be000029.html),
+and OpenRX [Lite](https://certification.oshwa.org/be000030.html),
+[Lite-UFL](https://certification.oshwa.org/be000031.html),
+[Mono](https://certification.oshwa.org/be000032.html) and
+[Gemini](https://certification.oshwa.org/be000033.html).
 
 ## Contributing
 
