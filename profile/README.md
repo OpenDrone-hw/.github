@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/OpenDrone-hw/.github/main/profile/opendrone-lockup-dark.png">
-    <img src="https://raw.githubusercontent.com/OpenDrone-hw/.github/main/profile/opendrone-lockup-light.png" alt="OpenDrone, an incutec project" width="440">
+    <img src="https://raw.githubusercontent.com/OpenDrone-hw/.github/main/profile/opendrone-lockup-light.png" alt="OpenDrone, an incutec project" width="560">
   </picture>
 </p>
 
@@ -25,23 +25,26 @@ panel yourself, or build it from the files. Both paths are supported.
 
 ## Hardware
 
-| Repo | What it is |
-|---|---|
-| [OpenESC-30x30](https://github.com/OpenDrone-hw/OpenESC-30x30) | 4in1 AM32 ESC, 30x30 mounting, 6S, AT32F421 per channel |
-| [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20) | The same ESC on a 20x20 pattern, plus its QC fixture |
-| [OpenFC-Lite](https://github.com/OpenDrone-hw/OpenFC-Lite) | Betaflight flight controller, RP2354B, 30.5x30.5, microSD blackbox, PIO analog OSD |
-| [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini) | The same controller on RP2354A, 20x20 |
-| [OpenRX](https://github.com/OpenDrone-hw/OpenRX) | ExpressLRS receivers: Lite and Lite-UFL on SX1281, Mono and Gemini on LR1121 |
-| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | AIO: flight controller, 4in1 ESC and ELRS receiver on one board |
-| [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | Whoop-size AIO with Bluejay ESCs |
-| [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Video transmitter |
-| [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Remote ID module |
-| [Charger](https://github.com/OpenDrone-hw/Charger) | LiPo charger |
-| [KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) | Symbols, footprints and 3D models for the parts we actually stock |
+| Repo | What it is | Status |
+|---|---|---|
+| [OpenESC-30x30](https://github.com/OpenDrone-hw/OpenESC-30x30) | 4in1 AM32 ESC, 30x30 mounting, 6S, AT32F421 per channel | Beta |
+| [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20) | The same ESC on a 20x20 pattern, plus its QC fixture | Beta |
+| [OpenFC-Lite](https://github.com/OpenDrone-hw/OpenFC-Lite) | Betaflight flight controller, RP2354B, 30.5x30.5, microSD blackbox, PIO analog OSD | Beta |
+| [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini) | The same controller on RP2354A, 20x20 | Beta |
+| [OpenRX](https://github.com/OpenDrone-hw/OpenRX) | ExpressLRS receivers: Lite and Lite-UFL on SX1281, Mono and Gemini on LR1121 | Alpha |
+| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | AIO: flight controller, 4in1 ESC and ELRS receiver on one board | Planned |
+| [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | Whoop-size AIO with Bluejay ESCs | Planned |
+| [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Video transmitter | Planned |
+| [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Remote ID module | Planned |
+| [Charger](https://github.com/OpenDrone-hw/Charger) | LiPo charger | Planned |
+| [KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) | Symbols, footprints and 3D models for the parts we actually stock | |
 
-What is buyable, what is in testing and what is still a spec discussion is on
-the [roadmap](https://opendrone.be/roadmap), which reads the state straight off
-these repos.
+**Beta** means buyable, first production batch, design can still change between
+batches. **Alpha** means in test with community testers and firmware
+maintainers, not buyable yet. **Planned** means the spec discussion is open on
+Discord and there is no design. The live state is on the
+[roadmap](https://opendrone.be/roadmap), which reads it straight off these
+repos.
 
 ## Firmware
 
