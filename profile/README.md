@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/OpenDrone-hw/.github/main/profile/opendrone-lockup-dark.png">
-    <img src="https://raw.githubusercontent.com/OpenDrone-hw/.github/main/profile/opendrone-lockup-light.png" alt="OpenDrone, an incutec project" width="560">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/OpenDrone-hw/.github/main/profile/opendrone-lockup-ondark.png">
+    <img src="https://raw.githubusercontent.com/OpenDrone-hw/.github/main/profile/opendrone-lockup-onlight.png" alt="OpenDrone, an incutec project" width="640">
   </picture>
 </p>
 
