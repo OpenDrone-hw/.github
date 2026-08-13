@@ -280,7 +280,21 @@ Buyable, design will not change. A change from here is a new product.
 Hardware is licensed [CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt), a
 reciprocal copyleft licence: modify a board, ship your version, and if someone
 asks for your sources you hand them over on the same terms. The point is not to
-stop clones but for everybody to share their improvements
+stop clones but for everybody to share their improvements.
+
+GitHub does not auto-detect CERN-OHL-S, so it reports our repos as
+`NOASSERTION`. The `LICENSE` file at the repo root is the authoritative text.
+
+**Names.** *incutec* is a registered trademark. *OpenDrone* is not, and we make
+no trademark claim over it. So: build the designs, sell them, call them what
+you like. What you cannot do is present your product as an official incutec
+product, or use incutec branding in a way that suggests we made, tested or
+support it. Describing what your board is based on is fine and always will be.
+
+**Bundled third-party assets.** A handful of 3D models carry their own upstream
+licences, CC-BY-SA-4.0 or GPL, in a notice embedded in the file itself. Those
+notices still apply to those files; the repository licence does not replace
+them. Where a repo bundles any, it says so in its README.
 
 # Questions
 
