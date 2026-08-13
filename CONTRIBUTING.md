@@ -105,8 +105,8 @@ how far along that is. It drives the roadmap on opendrone.be.
 |---|---|---|---|---|
 | 1 | [Planned](#1-planned) | no | The specification | Research, parts, opinions |
 | 2 | [In progress](#2-in-progress) | no | The design | Drawing, review |
-| 3 | [Alpha](#3-alpha) | no | The board | Flying it, breaking it |
-| 4 | [Beta](#4-beta) | yes | The product | Reports from real use |
+| 3 | [Alpha](#3-alpha) | no, sign-up only | The board | Flying it, breaking it |
+| 4 | [Beta](#4-beta) | yes, priced | The product | Reports from real use |
 | 5 | [Launched](#5-launched) | yes | All of it | Revisions |
 
 > [!NOTE]
@@ -226,9 +226,8 @@ dumps, and vendor-specific agent files.
 ## 3. Alpha
 
 Produced. Tested inside the project: community testers and firmware maintainers.
-Not buyable. Ask for samples if you'd like to help testing. A product page may
-exist on opendrone.be allowing for people to sign up to be notified when it moves
-into beta.
+Not on sale: the product page carries no price, only a sign-up to be told when
+it goes on sale. Ask if you'd like to help test.
 
 `images/` gets real renders and the
 repo gets its first `rev*` tag with the fab set and STEP attached. Its parts join
@@ -245,7 +244,7 @@ tooling are in `OpenDrone-Scripts/README.md` under "Release procedure".
 
 ## 4. Beta
 
-Buyable, first production batch.
+On sale at a price, first production batch. **Nothing is in beta yet.**
 
 The repo is complete by now: `README.md` reads as a product page, `AGENTS.md`
 describes the board that is actually in the box. 
