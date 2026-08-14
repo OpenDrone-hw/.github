@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://opendrone.be">opendrone.be</a> ·
-  <a href="https://discord.gg/ABajnacUsS">Discord</a> ·
+  <a href="https://discord.gg/v3sWmTcx3R">Discord</a> ·
   <a href="https://opendrone.be/roadmap">Roadmap</a>
 </p>
 
@@ -21,31 +21,19 @@
 
 | Repo | What it is | Status |
 |---|---|---|
-| [OpenESC-30x30](https://github.com/OpenDrone-hw/OpenESC-30x30) | 4in1 AM32 Electronic Speed Controller, 30x30, 8S | Alpha |
-| [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20) | 4in1 AM32 Electronic Speed Controller, 20x20, 6S | Alpha |
-| [OpenFC-Lite](https://github.com/OpenDrone-hw/OpenFC-Lite) | Betaflight Flight Controller on RP2354B, 30x30 | Alpha |
-| [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini) | Betaflight Flight Controller on RP2354A, 20x20 | Alpha |
-| [OpenRX](https://github.com/OpenDrone-hw/OpenRX) | ExpressLRS Receivers: Lite and Lite-UFL on SX1281, Mono and Gemini on LR1121 | Alpha |
-| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | AIO: flight controller, 4in1 ESC and ELRS receiver on one board | Planned |
-| [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | Whoop-size AIO with Bluejay ESCs | Planned |
-| [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame) | CNC carbon fibre frames, 3 inch and 5 inch freestyle | Planned |
-| [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Video transmitter | Planned |
-| [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Remote ID module | Planned |
-| [Charger](https://github.com/OpenDrone-hw/Charger) | Distributed USB-C LiPo charger | Planned |
+| [OpenESC-30x30](https://github.com/OpenDrone-hw/OpenESC-30x30) | 4in1 AM32 Electronic Speed Controller, 30x30, 8S | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
+| [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20) | 4in1 AM32 Electronic Speed Controller, 20x20, 6S | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
+| [OpenFC-Lite](https://github.com/OpenDrone-hw/OpenFC-Lite) | Betaflight Flight Controller on RP2354B, 30x30 | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
+| [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini) | Betaflight Flight Controller on RP2354A, 20x20 | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
+| [OpenRX](https://github.com/OpenDrone-hw/OpenRX) | ExpressLRS Receivers: Lite and Lite-UFL on SX1281, Mono and Gemini on LR1121 | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
+| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | AIO: flight controller, 4in1 ESC and ELRS receiver on one board | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
+| [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | Whoop-size AIO with Bluejay ESCs | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
+| [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame) | CNC carbon fibre frames, 3 inch and 5 inch freestyle | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
+| [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Video transmitter | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
+| [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Remote ID module | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
+| [Charger](https://github.com/OpenDrone-hw/Charger) | Distributed USB-C LiPo charger | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
 | [KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) | Symbols, footprints and 3D models for parts we have manufactured | |
 | [hardware-template](https://github.com/OpenDrone-hw/hardware-template) | What every hardware repo starts as | |
-
-**Alpha** means the board has been made and is in test with community testers
-and firmware maintainers. Not on sale, but you can sign up on the product page
-to be told when it is. **Beta** means the first production batch is on sale, at
-a price, and the design can still change between batches. Nothing is in beta
-yet. **Planned** means there is no design and the spec is being argued out on
-Discord: those repos are a specification and a call for a designer, and they are
-worth reading.
-
-Every repo carries its stage as a `status-*` topic, which is what the
-[roadmap](https://opendrone.be/roadmap) reads. Full definitions:
-[CONTRIBUTING](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project).
 
 ## Firmware
 
@@ -69,9 +57,6 @@ and OpenRX [Lite](https://certification.oshwa.org/be000030.html),
 [Gemini](https://certification.oshwa.org/be000033.html).
 
 ## Contributing
-
-Issues and pull requests are welcome on any repo. KiCad files cannot be merged,
-so say what you intend to change before you do, on Discord.
 
 How everything works, start to finish:
 [CONTRIBUTING](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md).
