@@ -183,6 +183,7 @@ BOM usable beyond one distributor.
 |---|---|---|
 | `README.md` | Consumers, curious learners | Renders, one paragraph, where it sits in the line, what it does and basic specifications |
 | `AGENTS.md` | Developers or agents | Architecture, key parts, power, connectors, layout constraints, revisions. |
+| `FLASHING.md` | A user at the bench | How to flash and debug this product. Every product flashes differently; add it once the board flashes. |
 | `CONTRIBUTING.md` | A contributor | A stub pointing here. |
 | `LICENSE` | Everyone | CERN-OHL-S-2.0, identical across repos. |
 
