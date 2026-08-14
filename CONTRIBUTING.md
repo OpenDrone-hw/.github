@@ -80,7 +80,6 @@ already be on it, might have experience or good ideas.
 ```sh
 gh repo fork OpenDrone-hw/<repo> --clone   # your own copy, cloned locally
 cd <repo>
-git submodule update --init                # pulls the shared parts library
 git checkout -b my-change                  # work on a branch, not on main
 ```
 
@@ -167,7 +166,10 @@ A symbol, footprint or 3D model is in there only if it is used on a board at
 
 `PARTS-USED.md` lists every part and which boards use it. Copy the symbol and
 footprint into the board repo's local `lib` library rather than referencing
-them: a KiCad project keeps working when the shared library changes.
+them: a KiCad project keeps working when the shared library changes. To browse
+the catalogue inside KiCad, install it through the Plugin and Content Manager:
+the [library README](https://github.com/OpenDrone-hw/KiCad-Library#usage) has
+the repository URL.
 
 Boards are assembled by [JLCPCB](https://jlcpcb.com/) from
 [LCSC](https://www.lcsc.com/) parts, so each component needs an `LCSC` field.
@@ -191,9 +193,8 @@ BOM usable beyond one distributor.
 ```
 <repo>/
 ├── README.md  AGENTS.md  CONTRIBUTING.md  LICENSE
-├── .gitignore  .gitattributes  .gitmodules
+├── .gitignore  .gitattributes
 ├── images/                     # README renders
-├── libs/KiCad-Library/         # submodule
 └── hardware/                   # the KiCad project, exactly one level down
     ├── <project>.kicad_pro / .kicad_sch / .kicad_pcb
     ├── <project>.kicad_dru            # committed
@@ -210,8 +211,8 @@ each with its own KiCad project.
 
 **Mechanical.** Example: [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame). One directory per size or variant, holding the CAD source, the STEP files and the drawings. 
 
-The project directory sits **exactly one level below the repo root**, because 3D
-model paths resolve as `${KIPRJMOD}/../libs/KiCad-Library/3dmodel/<file>`.
+The project directory sits **exactly one level below the repo root**, the shape
+every script and doc in the line assumes.
 
 **Commit:** schematic, PCB and project source; project-local libraries;
 `.kicad_dru`; `fabrication-toolkit-options.json`; the four root files;
