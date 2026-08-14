@@ -119,8 +119,9 @@ No design exists yet. The specification is being argued out on Discord. No
 product page.
 
 `README.md` is the one file that is properly written: what we want built, why,
-the constraints it has to meet, prior art and the open questions, `research/` grows
-as component selection gets worked out.
+the constraints it has to meet, prior art and the open questions. The spec and
+architecture get argued into shape there. A `research/` folder may collect
+inspiration along the way: competing products, teardowns, candidate parts.
 
 <details>
 <summary>Starting a new product repo</summary>
@@ -153,8 +154,8 @@ not build from them.
 | `.kicad_dru` | Per project, committed, canonical block copied from the template | Custom rules as reviewable text, not GUI state |
 | Lib tables | Project-local, `${KIPRJMOD}` relative | Portable paths. Global libraries are never used: they make a repo build only on the machine that has them |
 
- `.kicad_dru` holds custom rules only for example the ESCs run 2 oz outer copper and need
-0.16 mm clearance on the outer coppor layers.
+`.kicad_dru` holds custom rules only: for example the ESCs run 2 oz outer
+copper and need 0.16 mm clearance and track width on the outer copper layers.
 
 ### Parts: Reduce, !Reuse!, Recycle?
 
@@ -168,9 +169,10 @@ A symbol, footprint or 3D model is in there only if it is used on a board at
 footprint into the board repo's local `lib` library rather than referencing
 them: a KiCad project keeps working when the shared library changes.
 
-As of 13/09/2026: Boards are assembled by [JLCPCB](https://jlcpcb.com/) from
-[LCSC](https://www.lcsc.com/) parts. So each component needs an LCSC field. 
-As Incutec moves into in-house assembly, using manufacturer part numbers (MPN) becomes the standard. So using both is a plus!
+Boards are assembled by [JLCPCB](https://jlcpcb.com/) from
+[LCSC](https://www.lcsc.com/) parts, so each component needs an `LCSC` field.
+A manufacturer part number (`MPN`) field alongside it is a plus: it keeps the
+BOM usable beyond one distributor.
 
 <details>
 <summary>Repository structure from here on</summary>
