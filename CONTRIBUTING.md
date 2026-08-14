@@ -3,7 +3,7 @@
 
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/v3sWmTcx3R)
 [![YouTube](https://img.shields.io/badge/YouTube-JustFPV-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@justfpv1432)
-[![Shop](https://img.shields.io/badge/Shop-opendrone.be-c89d2e)](https://opendrone.be)
+[![Shop](https://img.shields.io/badge/Shop-opendrone.be-ffb700)](https://opendrone.be)
 [![Licence](https://img.shields.io/badge/Hardware-CERN--OHL--S--2.0-blue)](https://ohwr.org/cern_ohl_s_v2.txt)
 
 ---
