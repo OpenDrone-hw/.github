@@ -312,8 +312,8 @@ page (intros, pin call-outs, what is in the box) is editorial and lives on the
 site.
 
 Keep the `## Specifications` heading and the table shape when restructuring a
-README; renaming either silently freezes the site's spec table at its last
-import.
+README: the importer refuses a README without them, and the site keeps its
+last imported table until that is fixed.
 
 ---
 
