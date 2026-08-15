@@ -127,8 +127,11 @@ inspiration along the way: competing products, teardowns, candidate parts.
 
 1. `Use this template` on
    [hardware-template](https://github.com/OpenDrone-hw/hardware-template).
-2. Write the specification into `README.md`
-3. `gh repo edit OpenDrone-hw/<repo> --add-topic status-planned`
+2. Clone it with `git clone --recurse-submodules`. The template carries the
+   shared library as the submodule `hardware/KiCad-Library`, see
+   [Parts](#parts-reduce-reuse-recycle).
+3. Write the specification into `README.md`
+4. `gh repo edit OpenDrone-hw/<repo> --add-topic status-planned`
 
 </details>
 
@@ -152,6 +155,7 @@ not build from them.
 | Board Setup > Import Settings from Another Board | One-off, from the template | Brings an existing board onto it: stackup, constraints, presets, rules |
 | `.kicad_dru` | Per project, committed, canonical block copied from the template | Custom rules as reviewable text, not GUI state |
 | Lib tables | Project-local, `${KIPRJMOD}` relative | Portable paths. Global libraries are never used: they make a repo build only on the machine that has them |
+| Shared library | Submodule `hardware/KiCad-Library`, nickname `OpenDrone` | The manufactured-parts catalogue, pinned to a commit. Its 3D paths resolve through the project text variable `OPENDRONE_LIB` |
 
 `.kicad_dru` holds custom rules only: for example the ESCs run 2 oz outer
 copper and need 0.16 mm clearance and track width on the outer copper layers.
@@ -164,12 +168,27 @@ the catalogue of parts that have actually been manufactured.
 A symbol, footprint or 3D model is in there only if it is used on a board at
 `status-alpha` or beyond, so everything has probably survived at least one production run.
 
-`PARTS-USED.md` lists every part and which boards use it. Copy the symbol and
-footprint into the board repo's local `lib` library rather than referencing
-them: a KiCad project keeps working when the shared library changes. To browse
-the catalogue inside KiCad, install it through the Plugin and Content Manager:
-the [library README](https://github.com/OpenDrone-hw/KiCad-Library#usage) has
-the repository URL.
+`PARTS-USED.md` lists every part and which boards use it. Every repo made from
+the template carries the catalogue as the git submodule `hardware/KiCad-Library`,
+registered in the lib tables as `OpenDrone` and pinned to one commit, so a board
+keeps building when the catalogue moves on. Place parts from `OpenDrone`; draw
+into the repo's own `lib` only what the catalogue lacks.
+
+```sh
+git clone --recurse-submodules <repo>       # new clone
+git submodule update --init                 # existing clone, hardware/KiCad-Library empty
+git submodule update --remote hardware/KiCad-Library && git add hardware/KiCad-Library
+                                            # pull the newer catalogue in, then DRC and commit
+```
+
+Pulling a newer catalogue is a reviewed change like any other. If a repo
+predates the submodule, add it: `git submodule add
+https://github.com/OpenDrone-hw/KiCad-Library.git hardware/KiCad-Library`, then
+copy the two `OpenDrone` lib table lines and the `OPENDRONE_LIB` text variable
+from the template. To browse the catalogue outside a repo, install it through
+the Plugin and Content Manager: the
+[library README](https://github.com/OpenDrone-hw/KiCad-Library#usage) has the
+repository URL.
 
 Boards are assembled by [JLCPCB](https://jlcpcb.com/) from
 [LCSC](https://www.lcsc.com/) parts, so each component needs an `LCSC` field.
@@ -215,9 +234,10 @@ each with its own KiCad project.
 The project directory sits **exactly one level below the repo root**, the shape
 every script and doc in the line assumes.
 
-**Commit:** schematic, PCB and project source; project-local libraries;
-`.kicad_dru`; `fabrication-toolkit-options.json`; the four root files;
-`hardware/tools/`; `images/`.
+**Commit:** schematic, PCB and project source; project-local libraries; the
+`hardware/KiCad-Library` submodule pointer; `.kicad_dru`;
+`fabrication-toolkit-options.json`; the four root files; `hardware/tools/`;
+`images/`.
 
 **Ignore:** backups, autosave, locks, `*.kicad_prl`, `*.net`, `fp-info-cache`,
 `.history`, `datasheets/`, working `production/`, `*.glb`, `export/`, analysis
