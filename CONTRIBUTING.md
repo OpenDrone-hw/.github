@@ -185,7 +185,8 @@ Pulling a newer catalogue is a reviewed change like any other. If a repo
 predates the submodule, add it: `git submodule add
 https://github.com/OpenDrone-hw/KiCad-Library.git hardware/KiCad-Library`, then
 copy the two `OpenDrone` lib table lines and the `OPENDRONE_LIB` text variable
-from the template. To browse the catalogue outside a repo, install it through
+from the template. A multi-board repo puts the one submodule at its root and
+points both at `${KIPRJMOD}/../KiCad-Library`. To browse the catalogue outside a repo, install it through
 the Plugin and Content Manager: the
 [library README](https://github.com/OpenDrone-hw/KiCad-Library#usage) has the
 repository URL.
@@ -221,6 +222,7 @@ BOM usable beyond one distributor.
     ├── fabrication-toolkit-options.json
     ├── fp-lib-table  sym-lib-table    # project-local only
     ├── lib.kicad_sym  lib.pretty/  lib.3dshapes/
+    ├── KiCad-Library/ # shared catalogue, git submodule
     ├── datasheets/    # gitignored
     ├── production/    # gitignored working exports
     └── tools/         # board-specific scripts only
@@ -230,6 +232,12 @@ BOM usable beyond one distributor.
 each with its own KiCad project.
 
 **Mechanical.** Example: [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame). One directory per size or variant, holding the CAD source, the STEP files and the drawings. 
+
+**Fixtures, jigs and test boards** are not products and do not live in a
+product repo. They go in
+[OpenDrone-Fixtures](https://github.com/OpenDrone-hw/OpenDrone-Fixtures), one
+KiCad project per directory named `<Board>-<Purpose>` (`OpenESC-20x20-QC`,
+`OpenESC-20x20-Flashing`). The board's `AGENTS.md` links to its fixtures.
 
 The project directory sits **exactly one level below the repo root**, the shape
 every script and doc in the line assumes.
