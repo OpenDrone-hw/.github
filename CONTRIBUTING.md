@@ -120,8 +120,19 @@ product page.
 
 `README.md` is the one file that is properly written: what we want built, why,
 the constraints it has to meet, prior art and the open questions. The spec and
-architecture get argued into shape there. A `research/` folder may collect
-inspiration along the way: competing products, teardowns, candidate parts.
+architecture get argued into shape there. Its `## Specifications` table holds
+the target numbers, so the heading the site imports later is already in place.
+A `research/` folder may collect inspiration along the way: competing products,
+teardowns, candidate parts. There is no `AGENTS.md` yet: nothing about the
+design is fact, and the README is the write-up. `hardware/` holds the empty
+template project until someone starts drawing.
+
+**Proposing one.** Anyone can. Say it on Discord with a paragraph of what and
+why; if it holds up, an admin creates the repo and you write the README, or you
+write it in a repo under your own account and it is transferred into the
+organisation. A planned repo is on the roadmap and the vote ballot once it has
+an entry on the site, see
+[What opendrone.be reads from a repo](#what-opendronebe-reads-from-a-repo).
 
 <details>
 <summary>Starting a new product repo</summary>
@@ -131,12 +142,21 @@ inspiration along the way: competing products, teardowns, candidate parts.
 2. Clone it with `git clone --recurse-submodules`. The template carries the
    shared library as the submodule `hardware/KiCad-Library`, see
    [Parts](#parts-reduce-reuse-recycle).
-3. Write the specification into `README.md`
-4. `gh repo edit OpenDrone-hw/<repo> --add-topic status-planned`
+3. Write the specification into `README.md`. The template README is the
+   planned-stage skeleton: fill the brackets, keep the section order.
+4. `git rm AGENTS.md`. It comes back from the template when the design starts.
+5. `gh repo edit OpenDrone-hw/<repo> --add-topic status-planned` (admin), and
+   the shared topics `open-hardware`, `kicad` (or `cad`), plus one for the
+   product kind: `esc`, `flight-controller`, `receiver`, `vtx`, `remote-id`,
+   `aio`, `charger`, `frame`.
+6. Ask an admin for the roadmap entry on opendrone.be. It is one small pull
+   request on the site, so a name and a one-line note are all that is needed.
 
 </details>
 
-Moves on when someone claims it and starts a KiCad project.
+**Moves on when someone claims it and starts a KiCad project.** Restore
+`AGENTS.md` from the template, name the maintainer in it, flip the topic to
+`status-in-progress`.
 
 ## 2. In progress
 
@@ -305,6 +325,14 @@ overwrites it. Five things are read, nothing else:
 | Specifications | The first two-column table under `## Specifications` in `README.md` | Imported by `sync:specs` at release step 9. Plain ASCII, one fact per row: `2-6S`, `20 x 20 mm`, `4x DShot`; the site sets the marks. OpenRX (one repo, four boards) is hand-maintained on the site |
 | Downloads | Release assets, named `<Repo>-<rev>-fab.zip`, `<Repo>-<rev>.step`, `<Repo>-<rev>-schematic.pdf` | Imported by `sync:downloads` when the downloads chapter is switched on; an asset with another name is skipped |
 | Provenance | Commits and contributors | Fetched live: latest commit, commit strip and the contributors chapter on the product page |
+
+A repo is on the roadmap, and on the vote ballot, once it has an entry in
+[OpenDrone-Web](https://github.com/OpenDrone-hw/OpenDrone-Web):
+`app/lib/roadmap-data.ts` for the structure and `content/copy/roadmap.json`
+for its name and one-line note. That list is hand-maintained by admins; the
+five facts above are read from the repo from then on. Before alpha the roadmap
+card links to the repo, so the README is what a visitor lands on. The status
+badge needs no entry: it fetches any public OpenDrone-hw repo directly.
 
 Renders, teardown art and schematic viewers are exported from the KiCad files
 by the release procedure, not read from the repo. Everything else on a product
