@@ -26,15 +26,15 @@
 | [OpenFC-Lite](https://github.com/OpenDrone-hw/OpenFC-Lite) | Betaflight Flight Controller on RP2354B, 30x30 | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenFC-Lite.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini) | Betaflight Flight Controller on RP2354A, 20x20 | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenFC-Lite-Mini.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [OpenRX](https://github.com/OpenDrone-hw/OpenRX) | ExpressLRS Receivers: Lite and Lite-UFL on SX1281, Mono and Gemini on LR1121 | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRX.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
-| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | AIO: flight controller, 4in1 ESC and ELRS receiver on one board | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | AIO = FC + ESC + RX | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | Whoop-size AIO with Bluejay ESCs | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO-Whoop.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
-| [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame) | CNC carbon fibre frames, 3 inch and 5 inch freestyle | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenFrame.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame) | CNC carbon fibre frames | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenFrame.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Video transmitter | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenVTX.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Remote ID module | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRemoteID.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
-| [Charger](https://github.com/OpenDrone-hw/Charger) | Distributed USB-C LiPo charger | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/Charger.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
-| [KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) | Symbols, footprints and 3D models for parts we have manufactured | |
+| [Charger](https://github.com/OpenDrone-hw/Charger) | LiPo charger | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/Charger.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) | Symbols, footprints and 3D models | |
 | [hardware-template](https://github.com/OpenDrone-hw/hardware-template) | What every hardware repo starts as | |
-| [OpenDrone-Scripts](https://github.com/OpenDrone-hw/OpenDrone-Scripts) | Release gate chain, fab export checks, renders, STEP and board art tooling | |
+| [OpenDrone-Scripts](https://github.com/OpenDrone-hw/OpenDrone-Scripts) | Release chain, fab export checks, renders, STEP and board art tooling | |
 
 ## Firmware
 
