@@ -98,7 +98,8 @@ Every repo starts as a copy of
 [hardware-template](https://github.com/OpenDrone-hw/hardware-template)
 
 What changes is how much of it is real, and the `status-*` topic says
-how far along that is. It drives the roadmap on opendrone.be.
+how far along that is. It drives the roadmap on opendrone.be, and more: see
+[What opendrone.be reads from a repo](#what-opendronebe-reads-from-a-repo).
 
 | | Stage | Buyable | What is real | What it needs |
 |---|---|---|---|---|
@@ -270,7 +271,9 @@ Somewhere between alpha and beta a board gets a video on
 educational manner. If you designed part of it, you are named for it or featured, depending on what you'd like.
 
 One board revision is one tag and one GitHub release. The procedure and the shared
-tooling are in `OpenDrone-Scripts/README.md` under "Release procedure".
+tooling are in
+[OpenDrone-Scripts/README.md](https://github.com/OpenDrone-hw/OpenDrone-Scripts/blob/main/README.md#release-procedure)
+under "Release procedure".
 
 **Moves on when the design is settled, tested and reviewed enough to sell.**
 
@@ -286,6 +289,31 @@ describes the board that is actually in the box.
 ## 5. Launched
 
 Buyable, design will not change. A change from here is a new product.
+
+---
+
+# What opendrone.be reads from a repo
+
+The website is a mirror of the repos, never the other way round. Edit the
+fact here and the product page follows; edit it on the site and the next sync
+overwrites it. Five things are read, nothing else:
+
+| Fact | Where it lives in the repo | How the site gets it |
+|---|---|---|
+| Status | The `status-*` topic | Fetched live: roadmap column, whether the page shows a price, and the README status badge itself (`opendrone.be/api/status/<Repo>.json`, a shields.io endpoint) |
+| Product page | The repo's `homepage` field | `https://opendrone.be/products/<handle>`; several repos may share one page (both ESCs, both FCs) |
+| Specifications | The first two-column table under `## Specifications` in `README.md` | Imported by `sync:specs` at release step 9. Plain ASCII, one fact per row: `2-6S`, `20 x 20 mm`, `4x DShot`; the site sets the marks. OpenRX (one repo, four boards) is hand-maintained on the site |
+| Downloads | Release assets, named `<Repo>-<rev>-fab.zip`, `<Repo>-<rev>.step`, `<Repo>-<rev>-schematic.pdf` | Imported by `sync:downloads` when the downloads chapter is switched on; an asset with another name is skipped |
+| Provenance | Commits and contributors | Fetched live: latest commit, commit strip and the contributors chapter on the product page |
+
+Renders, teardown art and schematic viewers are exported from the KiCad files
+by the release procedure, not read from the repo. Everything else on a product
+page (intros, pin call-outs, what is in the box) is editorial and lives on the
+site.
+
+Keep the `## Specifications` heading and the table shape when restructuring a
+README: the importer refuses a README without them, and the site keeps its
+last imported table until that is fixed.
 
 ---
 

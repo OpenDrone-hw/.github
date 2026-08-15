@@ -21,19 +21,20 @@
 
 | Repo | What it is | Status |
 |---|---|---|
-| [OpenESC-30x30](https://github.com/OpenDrone-hw/OpenESC-30x30) | 4in1 AM32 Electronic Speed Controller, 30x30, 8S | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
-| [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20) | 4in1 AM32 Electronic Speed Controller, 20x20, 6S | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
-| [OpenFC-Lite](https://github.com/OpenDrone-hw/OpenFC-Lite) | Betaflight Flight Controller on RP2354B, 30x30 | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
-| [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini) | Betaflight Flight Controller on RP2354A, 20x20 | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
-| [OpenRX](https://github.com/OpenDrone-hw/OpenRX) | ExpressLRS Receivers: Lite and Lite-UFL on SX1281, Mono and Gemini on LR1121 | [Alpha](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#3-alpha) |
-| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | AIO: flight controller, 4in1 ESC and ELRS receiver on one board | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
-| [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | Whoop-size AIO with Bluejay ESCs | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
-| [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame) | CNC carbon fibre frames, 3 inch and 5 inch freestyle | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
-| [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Video transmitter | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
-| [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Remote ID module | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
-| [Charger](https://github.com/OpenDrone-hw/Charger) | Distributed USB-C LiPo charger | [Planned](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#1-planned) |
+| [OpenESC-30x30](https://github.com/OpenDrone-hw/OpenESC-30x30) | 4in1 AM32 Electronic Speed Controller, 30x30, 8S | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenESC-30x30.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20) | 4in1 AM32 Electronic Speed Controller, 20x20, 6S | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenESC-20x20.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenFC-Lite](https://github.com/OpenDrone-hw/OpenFC-Lite) | Betaflight Flight Controller on RP2354B, 30x30 | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenFC-Lite.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini) | Betaflight Flight Controller on RP2354A, 20x20 | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenFC-Lite-Mini.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenRX](https://github.com/OpenDrone-hw/OpenRX) | ExpressLRS Receivers: Lite and Lite-UFL on SX1281, Mono and Gemini on LR1121 | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRX.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | AIO: flight controller, 4in1 ESC and ELRS receiver on one board | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | Whoop-size AIO with Bluejay ESCs | listed with OpenAIO on the [roadmap](https://opendrone.be/roadmap) |
+| [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame) | CNC carbon fibre frames, 3 inch and 5 inch freestyle | see the [roadmap](https://opendrone.be/roadmap) |
+| [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Video transmitter | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenVTX.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Remote ID module | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRemoteID.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [Charger](https://github.com/OpenDrone-hw/Charger) | Distributed USB-C LiPo charger | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/Charger.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) | Symbols, footprints and 3D models for parts we have manufactured | |
 | [hardware-template](https://github.com/OpenDrone-hw/hardware-template) | What every hardware repo starts as | |
+| [OpenDrone-Scripts](https://github.com/OpenDrone-hw/OpenDrone-Scripts) | Release gate chain, fab export checks, renders, STEP and board art tooling | |
 
 ## Firmware
 
