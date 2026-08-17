@@ -32,15 +32,17 @@
 
 ## Why Contribute?
 
-Open Source hardware is not short of good intentions. It is short of constraints and a common goal, which is why so much of it ends up as one-off designs nobody else can build on. That is the part we are trying to fix.
+The world of open source hardware is not short of people with good intentions, but it is constrained by chaos and complicated production. With open source software, if you want to use someone else's work, you just download it. With hardware, it is only after the download that the real work begins. This is why so many open source hardware projects end up as one-off designs nobody else can build on. That is something we want to change, and to prove it is possible, we made OpenDrone.
 
-We believe OpenDrone can function as a proof that Open Source hardware development can be just as good, or better, than commercial hardware. Having anybody being able to view and contribute to a design means the people get to decide what works for them.
+We believe OpenDrone can be the pioneer that open source hardware needs, and show that it can be just as good as "traditional" commercial hardware, or better.
 
-Not to mention repairability or the educational value of good, maintained designs.
+An open source design means everyone can see and learn how something works, and eventually they can even contribute to making the product more suitable for themselves. That leads to a product people really want: by the people, for the people.
 
-Design files are not a trade secret worth keeping. Unless you are genuinely doing something state of the art, holding them back buys you very little and costs everyone else a lot.
+And as an added bonus, the products are repairable by design. If you want an update, you can just collab with the community and build it yourself. And if we ever stop supporting a product, you are not left with dead hardware. The files are yours, and the community can keep it alive as long as people still care about it.
 
-Working on OpenDrone means learning from others, discussing problems in the open, and staying close to the firmware devs. You get named for what you do. And your design might actually get built and sold on opendrone.be.
+Here at Incutec we believe that design files are not a trade secret worth keeping. Closed hardware does make money, we know that, but it makes money through lock-in, not because the schematic is a secret. Unless you are genuinely doing something state of the art, the design was never the hard part. We would rather earn it by making our hardware easy to build, easy to fix and easy to buy.
+
+So come work on it. Learn from the people already there, argue about problems in the open, stay close to the firmware devs. You get named for what you do. And your design might actually get built and sold on opendrone.be.
 
 ## Two kinds of designs
 
