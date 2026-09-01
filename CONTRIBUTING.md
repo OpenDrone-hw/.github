@@ -173,7 +173,7 @@ The design is being drawn. Prototypes may be ordered. Schematics may change.
 | Board Setup > Import Settings from Another Board | One-off, from the template | Brings stackup, constraints, presets, rules |
 | `.kicad_dru` | Per project, committed, canonical block copied from the template | Custom rules as reviewable text |
 | Lib tables | Project-local, `${KIPRJMOD}` relative | Portable paths. Global libraries are never used |
-| Shared library | Submodule `hardware/KiCad-Library`, nickname `OpenDrone` | The manufactured-parts catalogue. Its 3D paths resolve through the project text variable `OPENDRONE_LIB` |
+| Shared library | Submodule `hardware/KiCad-Library`, nickname `OpenDrone` | The manufactured-parts catalogue, including exact component PDFs. Its 3D and datasheet paths resolve through the project text variable `OPENDRONE_LIB` |
 
 `.kicad_dru` holds custom rules only: for example ESCs run 2 oz outer
 copper and need 0.16 mm clearance and track width on the outer copper layers.
@@ -185,6 +185,15 @@ the catalogue of parts that have actually been manufactured.
 
 A symbol, footprint or 3D model is in there only if it is used on a board at
 `status-alpha` or beyond, so everything has probably survived at least one production run.
+
+Every orderable physical symbol in the catalogue links to one exact PDF
+committed in `KiCad-Library/datasheet/`. The manifest there records its source
+URL and SHA-256 digest, and one family document may serve several symbols. This
+keeps the evidence identical for every developer without duplicating large
+files in product repositories. Generic resistors, capacitors and similar
+commodity primitives use KiCad's standard libraries and do not need custom
+symbols or datasheet entries; virtual/interface symbols must be explicitly
+exempted in the manifest.
 
 `PARTS-USED.md` lists every part and which boards use it. Every repo made from
 the template carries the catalogue as the git submodule `hardware/KiCad-Library`,
@@ -209,9 +218,12 @@ the Plugin and Content Manager: the
 repository URL.
 
 Boards are assembled by [JLCPCB](https://jlcpcb.com/) from
-[LCSC](https://www.lcsc.com/) parts, so each component needs an `LCSC` field.
-A manufacturer part number (`MPN`) field alongside it is a plus: it keeps the
-BOM usable beyond one distributor.
+[LCSC](https://www.lcsc.com/) parts, so each orderable component needs an
+`LCSC` field. A manufacturer part number (`MPN`) field alongside it is a plus:
+it keeps the BOM usable beyond one distributor. When a physical part is
+promoted into the shared library, also commit its exact PDF, add it to the
+datasheet manifest and point the symbol's `Datasheet` field at
+`${OPENDRONE_LIB}/datasheet/<file>.pdf`.
 
 We don't want it to stay that way, read: https://opendrone.be/production
 
@@ -241,8 +253,7 @@ We don't want it to stay that way, read: https://opendrone.be/production
     ├── fabrication-toolkit-options.json
     ├── fp-lib-table  sym-lib-table    # project-local only
     ├── lib.kicad_sym  lib.pretty/  lib.3dshapes/
-    ├── KiCad-Library/ # shared catalogue, git submodule
-    ├── datasheets/    # gitignored
+    ├── KiCad-Library/ # shared catalogue and datasheets, git submodule
     ├── production/    # gitignored working exports
     └── tools/         # board-specific scripts only
 ```
@@ -265,7 +276,8 @@ every script and doc in the line assumes.
 `images/`.
 
 **Ignore:** backups, autosave, locks, `*.kicad_prl`, `*.net`, `fp-info-cache`,
-`.history`, `datasheets/`, working `production/`, `*.glb`, `export/`, analysis
+`.history`, local or legacy `datasheets/` caches, working `production/`,
+`*.glb`, `export/`, analysis
 dumps, and vendor-specific agent files.
 
 </details>
