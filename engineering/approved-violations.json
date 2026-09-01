@@ -75,7 +75,7 @@
         "padstack:warning": 2
       }
     },
-    "OpenRX/OpenRX-Lite/OpenRX-Lite": {
+    "OpenRX-Lite/hardware/OpenRX-Lite": {
       "erc": {
         "endpoint_off_grid:warning": 3,
         "lib_symbol_issues:warning": 8,
@@ -90,7 +90,7 @@
         "shorting_items:error": 4
       }
     },
-    "OpenRX/OpenRX-Lite-UFL/OpenRX-Lite-UFL": {
+    "OpenRX-Lite-UFL/hardware/OpenRX-Lite-UFL": {
       "erc": {
         "endpoint_off_grid:warning": 3,
         "lib_symbol_issues:warning": 7,
@@ -106,7 +106,7 @@
         "solder_mask_bridge:warning": 1
       }
     },
-    "OpenRX/OpenRX-Mono/OpenRX-Mono": {
+    "OpenRX-Mono/hardware/OpenRX-Mono": {
       "erc": {
         "endpoint_off_grid:warning": 3,
         "lib_symbol_issues:warning": 10,
@@ -120,7 +120,7 @@
         "lib_footprint_mismatch:warning": 8
       }
     },
-    "OpenRX/OpenRX-Gemini/OpenRX-Gemini": {
+    "OpenRX-Gemini/hardware/OpenRX-Gemini": {
       "erc": {
         "endpoint_off_grid:warning": 3,
         "lib_symbol_issues:warning": 11,

@@ -263,9 +263,6 @@ We don't want it to stay that way, read: https://opendrone.be/production
     └── tools/         # board-specific scripts only
 ```
 
-**Multi-Board designs.** Example: [OpenRX](https://github.com/OpenDrone-hw/OpenRX). One directory per variant at repo root,
-each with its own KiCad project.
-
 **Mechanical.** Example: [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame). One directory per size or variant, holding the CAD source, the STEP files and the drawings. 
 
 **Fixtures, jigs and test boards** go in
@@ -334,7 +331,7 @@ fact here and the product page follows.
 |---|---|---|
 | Status | The `status-*` topic | Fetched live: roadmap column, whether the page shows a price, and the README status badge itself (`opendrone.be/api/status/<Repo>.json`, a shields.io endpoint) |
 | Product page | The repo's `homepage` field | `https://opendrone.be/products/<handle>`; several repos may share one page |
-| Specifications | The first two-column table under `## Specifications` in `README.md` | Imported by `sync:specs` at release step 9. Plain ASCII, one fact per row: `2-6S`, `20 x 20 mm`, `4x DShot`; the site sets the marks. Multiboard repos (eg OpenRX) is hand-maintained on the site |
+| Specifications | The first two-column table under `## Specifications` in `README.md` | Imported by `sync:specs` at release step 9. Plain ASCII, one fact per row: `2-6S`, `20 x 20 mm`, `4x DShot`; the site sets the marks. |
 | Downloads | Release assets, named `<Repo>-<rev>-fab.zip`, `<Repo>-<rev>.step`, `<Repo>-<rev>-schematic.pdf` | Imported by `sync:downloads` when the downloads chapter is switched on |
 | Provenance | Commits and contributors | Fetched live: latest commit, the contributors chapter on the product page |
 
