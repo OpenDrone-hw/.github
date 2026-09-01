@@ -303,10 +303,10 @@ Somewhere between alpha and beta a board gets a video on
 [JustFPV](https://www.youtube.com/@justfpv1432): what it is, how it works in a fun 
 educational manner. If you designed part of it, you are named for it or featured, depending on what you'd like.
 
-One board revision is one tag and one GitHub release. The procedure and the shared
-tooling are in
-[OpenDrone-Scripts/README.md](https://github.com/OpenDrone-hw/OpenDrone-Scripts/blob/main/README.md#release-procedure)
-under "Release procedure".
+One board revision is one tag and one GitHub release. The OpenDrone procedure
+and approved-finding policy are in
+[RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md),
+and reusable hardware operations are supplied by Incutec hardware tooling.
 
 **Moves on when the design is settled, tested and reviewed enough to sell.**
 

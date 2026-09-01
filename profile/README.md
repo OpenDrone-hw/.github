@@ -34,7 +34,6 @@
 | [Charger](https://github.com/OpenDrone-hw/Charger) | LiPo charger | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/Charger.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) | Symbols, footprints and 3D models | |
 | [hardware-template](https://github.com/OpenDrone-hw/hardware-template) | What every hardware repo starts as | |
-| [OpenDrone-Scripts](https://github.com/OpenDrone-hw/OpenDrone-Scripts) | Release chain, fab export checks, renders, STEP and board art tooling | |
 
 ## Firmware
 
