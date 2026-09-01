@@ -117,11 +117,12 @@ how far along that is. It drives the roadmap on opendrone.be, and more: see
 
 ## 1. Planned
 
-No design exists yet. The specification is being argued out on Discord.
+No design exists yet. The README records the current specification and its
+supporting evidence; discussion happens on Discord.
 
-`README.md` is the one file that is properly written: what we want built, why,
-the constraints it has to meet, prior art and the open questions. The spec and
-architecture get argued into shape there.
+`README.md` states what the project is, why it exists, its constraints and the
+decisions supported by current evidence. `AGENTS.md` gives contributors a
+concise one-view repository brief without assignments or speculative tasks.
 A `research/` folder may collect inspiration: competing products,
 teardowns, candidate parts. 
 
@@ -142,7 +143,8 @@ an entry on the site, see
    [Parts](#parts-reduce-reuse-recycle).
 3. Write the specification into `README.md`. The template README is the
    planned-stage skeleton: fill the brackets, keep the section order.
-4. `git rm AGENTS.md`. It comes back from the template when the design starts.
+4. Fill `AGENTS.md` with verified repository facts. Omit sections that do not
+   yet apply; do not add assignments, TODOs or speculative decisions.
 5. `gh repo edit OpenDrone-hw/<repo> --add-topic status-planned` (admin), and
    the shared topics `open-hardware`, `kicad` (or `cad`), plus one for the
    product kind: `esc`, `flight-controller`, `receiver`, `vtx`, `remote-id`,
@@ -152,7 +154,7 @@ an entry on the site, see
 
 </details>
 
-**Moves on when someone claims it and starts a KiCad project.** 
+**Moves on when a KiCad project exists and design work has started.**
 
 ## 2. In progress
 
