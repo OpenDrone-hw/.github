@@ -183,17 +183,22 @@ copper and need 0.16 mm clearance and track width on the outer copper layers.
 [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) is
 the catalogue of parts that have actually been manufactured.
 
-A symbol, footprint or 3D model is in there only if it is used on a board at
-`status-alpha` or beyond, so everything has probably survived at least one production run.
+Every reusable, datasheet-bearing component used on a board at `status-alpha`
+or beyond belongs there, and nothing from a merely planned or in-progress
+board does. The catalogue therefore contains only parts that have probably
+survived at least one production run while still covering every manufactured
+IC, semiconductor, sensor, connector and other non-generic component.
 
 Every orderable physical symbol in the catalogue links to one exact PDF
 committed in `KiCad-Library/datasheet/`. The manifest there records its source
 URL and SHA-256 digest, and one family document may serve several symbols. This
 keeps the evidence identical for every developer without duplicating large
-files in product repositories. Generic resistors, capacitors and similar
-commodity primitives use KiCad's standard libraries and do not need custom
-symbols or datasheet entries; virtual/interface symbols must be explicitly
-exempted in the manifest.
+files in product repositories. Generic R/C/L/LED primitives use KiCad's
+standard libraries and do not need custom symbols or datasheet entries;
+virtual/interface symbols must be explicitly exempted in the manifest. The
+shared library's `tools/build-parts-index.py --check` command audits every
+alpha-or-later board and fails if a datasheet-bearing manufactured part has not
+been promoted.
 
 `PARTS-USED.md` lists every part and which boards use it. Every repo made from
 the template carries the catalogue as the git submodule `hardware/KiCad-Library`,
