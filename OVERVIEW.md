@@ -3,23 +3,21 @@
 ## Position in the workspace
 
 ```mermaid
-%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#94a3b8", "fontFamily": "Inter, ui-sans-serif, system-ui"}, "flowchart": {"curve": "linear", "nodeSpacing": 30, "rankSpacing": 44}}}%%
+%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#94a3b8", "primaryTextColor": "#f8fafc", "edgeLabelBackground": "#0b1120", "fontSize": "14px"}, "flowchart": {"curve": "linear", "nodeSpacing": 30, "rankSpacing": 60}}}%%
 flowchart LR
+    ACC[".incutec/opendrone-access.json<br/>enforced org configuration"]
     ORG["_org-github<br/>OpenDrone-hw/.github<br/>written policy · org profile"]
-    TPL["_template<br/>hardware-template<br/>Rules section · skeleton"]
-    HW["hardware/&lt;Board&gt;<br/>subjects of policy<br/>status badge · README rows"]
-    SCR["scripts/hardware/release/<br/>kicad_release.py --approved-violations<br/>apply_models.py --fixes"]
-    ACC[".incutec/opendrone-access.json<br/>github_access.py<br/>enforced org configuration"]
-    WEB["OpenDrone/web<br/>status API · product pages"]
+    TPL["_template<br/>Rules section · skeleton"]
+    HW["hardware/&lt;Board&gt;<br/>status badge · README rows"]
+    SCR["scripts/hardware/release/<br/>kicad_release.py · apply_models.py"]
     GHORG["GITHUB · OpenDrone-hw<br/>profile README · status-* topics"]
 
     ORG -->|"CONTRIBUTING · RELEASES<br/>linked from every board"| HW
     ORG -->|"RELEASES.md linked<br/>from _template/AGENTS.md"| TPL
-    TPL -->|"copy per new repo<br/>Rules stamped"| HW
-    ORG -->|"engineering/*.json<br/>consumed as inputs"| SCR
-    ACC -.->|"applies teams + permissions<br/>.github is one repo in the map"| GHORG
+    TPL -->|"copy per new repo"| HW
+    ORG -->|"engineering/*.json inputs"| SCR
     ORG -->|"profile/README.md"| GHORG
-    GHORG -.->|"status-* topic"| WEB
+    ACC -.->|"teams + permissions<br/>.github is one repo in the map"| GHORG
 
     classDef here fill:#1e293b,stroke:#f8fafc,color:#f8fafc,stroke-width:2.5px;
     classDef foundation fill:#1e293b,stroke:#94a3b8,color:#f8fafc,stroke-width:1.5px;
@@ -31,13 +29,13 @@ flowchart LR
     class TPL,SCR foundation;
     class HW design;
     class ACC control;
-    class WEB,GHORG external;
+    class GHORG external;
 ```
 
 ## Repository map
 
 ```mermaid
-%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#64748b", "fontFamily": "Inter, ui-sans-serif, system-ui"}, "flowchart": {"curve": "basis", "nodeSpacing": 22, "rankSpacing": 34}}}%%
+%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#64748b", "primaryTextColor": "#f8fafc", "edgeLabelBackground": "#0b1120", "fontSize": "14px"}, "flowchart": {"curve": "basis", "nodeSpacing": 24, "rankSpacing": 36}}}%%
 flowchart TB
     ROOT["_org-github/"]
 
@@ -82,17 +80,15 @@ flowchart TB
 ## Stage ladder
 
 ```mermaid
-%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#94a3b8", "fontFamily": "Inter, ui-sans-serif, system-ui"}, "flowchart": {"curve": "linear", "nodeSpacing": 30, "rankSpacing": 48}}}%%
-flowchart LR
+%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#94a3b8", "primaryTextColor": "#f8fafc", "edgeLabelBackground": "#0b1120", "fontSize": "14px"}, "flowchart": {"curve": "linear", "nodeSpacing": 30, "rankSpacing": 44}}}%%
+flowchart TB
     S0["copy of hardware-template"] --> S1["1 · PLANNED<br/>spec only · not buyable"]
     S1 -->|"design drawn"| S2["2 · IN PROGRESS"]
     S2 -->|"first rev* tag · fab set · STEP<br/>parts join KiCad-Library"| S3["3 · ALPHA<br/>not on sale · sign-up"]
     S3 -->|"priced · first batch"| S4["4 · BETA<br/>on sale"]
     S4 -->|"design frozen"| S5["5 · LAUNCHED"]
 
-    TOPIC["status-* GitHub topic<br/>admins move it · never written in-repo"]
-    TOPIC -.-> S1
-    TOPIC -.-> S5
+    TOPIC["status-* GitHub topic<br/>admins move it<br/>never written in-repo"]
 
     classDef design fill:#0c4a6e,stroke:#38bdf8,color:#f8fafc,stroke-width:2px;
     classDef evidence fill:#581c87,stroke:#c084fc,color:#faf5ff,stroke-width:2px;
@@ -108,22 +104,24 @@ flowchart LR
 ## Release preparation vs publication
 
 ```mermaid
-%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#cbd5e1", "fontFamily": "Inter, ui-sans-serif, system-ui"}, "flowchart": {"curve": "linear", "nodeSpacing": 26, "rankSpacing": 44}}}%%
-flowchart LR
+%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#cbd5e1", "primaryTextColor": "#f8fafc", "edgeLabelBackground": "#0b1120", "fontSize": "14px"}, "flowchart": {"curve": "linear", "nodeSpacing": 26, "rankSpacing": 44}}}%%
+flowchart TB
+    subgraph INPUTS["POLICY INPUTS"]
+        direction LR
+        AV["engineering/approved-violations.json<br/>max count per finding type"]
+        MF["engineering/model-fixes.json<br/>3D model corrections"]
+        AV ~~~ MF
+    end
+
     subgraph PREP["PREPARATION · automated"]
         direction LR
-        G1{"1 · ERC + DRC<br/>≤ approved max per type"}
-        G2{"2 · 3D models<br/>none missing or invalid"}
-        G3{"3 · fab set<br/>generate + check"}
+        G1["1 · ERC + DRC<br/>≤ approved max per type<br/>new type → maintainer review"]
+        G2["2 · 3D models<br/>none missing or invalid"]
+        G3["3 · fab set<br/>generate + check"]
         G4["4 · STEP export"]
         G5["5 · schematic PDF"]
         G1 --> G2 --> G3 --> G4 --> G5
     end
-
-    AV["engineering/approved-violations.json"] -.-> G1
-    MF["engineering/model-fixes.json"] -.-> G2
-    G1 -->|"new type or higher count"| REV["maintainer review<br/>waive with _comment"]
-    REV -.-> AV
 
     subgraph PUB["PUBLICATION · explicit human actions"]
         direction LR
@@ -132,22 +130,23 @@ flowchart LR
         H3["storefront update"]
         H4["order boards"]
         H5["programming"]
+        H1 ~~~ H2 ~~~ H3 ~~~ H4 ~~~ H5
     end
 
-    G5 -->|"prepared"| H1
+    INPUTS --> PREP
+    PREP -->|"prepared · nothing published yet"| PUB
 
+    classDef policy fill:#0c4a6e,stroke:#38bdf8,color:#f8fafc,stroke-width:2px;
     classDef gate fill:#27272a,stroke:#f8fafc,color:#f8fafc,stroke-width:2px;
     classDef step fill:#1e293b,stroke:#94a3b8,color:#f8fafc,stroke-width:1.5px;
-    classDef policy fill:#0c4a6e,stroke:#38bdf8,color:#f8fafc,stroke-width:2px;
-    classDef human fill:#581c87,stroke:#c084fc,color:#faf5ff,stroke-width:2px;
     classDef release fill:#134e4a,stroke:#2dd4bf,color:#f0fdfa,stroke-width:2px;
 
+    class AV,MF policy;
     class G1,G2,G3 gate;
     class G4,G5 step;
-    class AV,MF policy;
-    class REV human;
     class H1,H2,H3,H4,H5 release;
 
+    style INPUTS fill:transparent,stroke:#0369a1,color:#bae6fd;
     style PREP fill:transparent,stroke:#475569,color:#cbd5e1;
     style PUB fill:transparent,stroke:#0f766e,color:#99f6e4;
 ```
@@ -155,14 +154,14 @@ flowchart LR
 ## Roles
 
 ```mermaid
-%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#94a3b8", "fontFamily": "Inter, ui-sans-serif, system-ui"}, "flowchart": {"curve": "linear", "nodeSpacing": 28, "rankSpacing": 44}}}%%
-flowchart LR
+%%{init: {"theme": "base", "themeVariables": {"background": "#0b1120", "lineColor": "#94a3b8", "primaryTextColor": "#f8fafc", "edgeLabelBackground": "#0b1120", "fontSize": "14px"}, "flowchart": {"curve": "linear", "nodeSpacing": 30, "rankSpacing": 44}}}%%
+flowchart TB
     R0["ANYONE<br/>GitHub account · fork · PR"] -->|"one merged PR"| R1["CONTRIBUTOR<br/>named on product page"]
     R1 -->|"named in board AGENTS.md"| R2["BOARD MAINTAINER<br/>holds the board<br/>approves design changes · defines revisions"]
     R2 -->|"invitation"| R3["ORGANISATION MEMBER<br/>push branches directly"]
     R3 --> R4["ADMIN · Incutec staff<br/>releases · fab orders · secrets<br/>org settings · status topics"]
 
-    AI["AI USAGE<br/>allowed: research · BOM · library · ERC/DRC · docs<br/>not: schematics · placement · routing"]
+    AI["AI USAGE<br/>allowed: research · BOM · library<br/>ERC/DRC · docs<br/>not: schematics · placement · routing"]
 
     classDef open fill:#1e293b,stroke:#94a3b8,color:#f8fafc,stroke-width:1.5px;
     classDef design fill:#0c4a6e,stroke:#38bdf8,color:#f8fafc,stroke-width:2px;
