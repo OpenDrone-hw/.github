@@ -222,15 +222,17 @@ the Plugin and Content Manager: the
 [library README](https://github.com/OpenDrone-hw/KiCad-Library#usage) has the
 repository URL.
 
-Boards are assembled by [JLCPCB](https://jlcpcb.com/) from
-[LCSC](https://www.lcsc.com/) parts, so each orderable component needs an
-`LCSC` field. A manufacturer part number (`MPN`) field alongside it is a plus:
-it keeps the BOM usable beyond one distributor. When a physical part is
-promoted into the shared library, also commit its exact PDF, add it to the
-datasheet manifest and point the symbol's `Datasheet` field at
-`${OPENDRONE_LIB}/datasheet/<file>.pdf`.
+Manufacturing must remain portable across assembly suppliers. Every orderable
+component needs `Manufacturer` and manufacturer part number (`MPN`) fields.
+When the part is available from [LCSC](https://www.lcsc.com/), also add its
+`LCSC` field so the same BOM supports [JLCPCB](https://jlcpcb.com/)
+prototyping; a distributor part number supplements, but does not replace, the
+MPN. When a physical part is promoted into the shared library, also commit its
+exact PDF, add it to the datasheet manifest and point the symbol's `Datasheet`
+field at `${OPENDRONE_LIB}/datasheet/<file>.pdf`.
 
-We don't want it to stay that way, read: https://opendrone.be/production
+Read about OpenDrone's longer-term
+[production direction](https://opendrone.be/production).
 
 <details>
 <summary>Repository structure from here on</summary>
@@ -302,8 +304,7 @@ educational manner. If you designed part of it, you are named for it or featured
 
 One board revision is one tag and one GitHub release. The OpenDrone procedure
 and approved-finding policy are in
-[RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md),
-and reusable hardware operations are supplied by Incutec hardware tooling.
+[RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).
 
 **Moves on when the design is settled, tested and reviewed enough to sell.**
 

@@ -1,8 +1,8 @@
 # OpenDrone release standard
 
-OpenDrone release policy is public product policy. Incutec supplies the
-hardware-management software that executes it; individual product repositories
-remain the source of their designs, revisions, and product-specific scripts.
+OpenDrone release policy is public product policy. Individual product
+repositories remain the source of their designs, revisions, validation
+commands, and product-specific scripts.
 
 ## Design reports
 
@@ -19,23 +19,14 @@ is never inferred from an earlier board or a similar circuit.
 
 ## Preparation chain
 
-From the Incutec workspace root, run the hardware-agnostic release manager with
-the OpenDrone approval data and the board's explicit approval key:
+Use the validation commands documented in the product repository. Release
+preparation must then:
 
-```sh
-python3 scripts/hardware/release/kicad_release.py \
-  OpenDrone/hardware/<repo>/hardware/<board>.kicad_pcb \
-  --approved-violations OpenDrone/_org-github/engineering/approved-violations.json \
-  --approval-key <repo>/hardware/<board>
-```
-
-The preparation chain:
-
-1. Generates ERC and DRC reports and compares them with approved findings.
-2. Blocks missing or invalid 3D models that affect export.
-3. Generates and checks the fabrication set.
-4. Exports the board STEP model.
-5. Exports the schematic PDF.
+1. Generate ERC and DRC reports and compare them with approved findings.
+2. Block missing or invalid 3D models that affect export.
+3. Generate and check the fabrication set.
+4. Export the board STEP model.
+5. Export the schematic PDF.
 
 These are preparation steps, not publication or production authorization.
 
@@ -48,4 +39,4 @@ ordering, programming, or operating hardware requires its own explicit action.
 
 Board-specific scripts stay in that board repository. OpenDrone-wide written
 standards and approved portfolio configuration stay in this organization
-repository. Reusable implementations stay with Incutec.
+repository.
