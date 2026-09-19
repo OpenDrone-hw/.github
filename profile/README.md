@@ -1,4 +1,5 @@
-<img width="2560" height="1440" alt="OpenDrone banner (1)" src="https://github.com/user-attachments/assets/aacb66bb-712b-46f0-92f8-2f12d35b6644" />
+<img width="1600" height="900" alt="OpenDrone banner (3)" src="https://github.com/user-attachments/assets/faf0ea5a-dfae-4d2d-9cbd-ef9c408f94bf" />
+
 
 
 <p align="center">
