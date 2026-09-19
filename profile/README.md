@@ -1,9 +1,5 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/OpenDrone-hw/.github/main/profile/opendrone-lockup-ondark.png">
-    <img src="https://raw.githubusercontent.com/OpenDrone-hw/.github/main/profile/opendrone-lockup-onlight.png" alt="OpenDrone, an incutec project" width="640">
-  </picture>
-</p>
+<img width="2560" height="1440" alt="OpenDrone banner (1)" src="https://github.com/user-attachments/assets/aacb66bb-712b-46f0-92f8-2f12d35b6644" />
+
 
 <p align="center">
   <strong>Open Source FPV hardware for all.</strong><br/>
