@@ -1,4 +1,4 @@
-<img width="1600" height="900" alt="OpenDrone banner (3)" src="https://github.com/user-attachments/assets/faf0ea5a-dfae-4d2d-9cbd-ef9c408f94bf" />
+<img width="1600" height="900" alt="OpenDrone" src="https://github.com/user-attachments/assets/faf0ea5a-dfae-4d2d-9cbd-ef9c408f94bf" />
 
 
 
@@ -29,7 +29,7 @@
 | [OpenRX-Gemini](https://github.com/OpenDrone-hw/OpenRX-Gemini) | Dual-radio Gemini and Xrossband ExpressLRS receiver | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRX-Gemini.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | AIO = FC + ESC + RX | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | Whoop-size AIO with Bluejay ESCs | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO-Whoop.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
-| [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame) | CNC carbon fibre frames | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenFrame.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| OpenFrame | CNC carbon fibre frames | |
 | [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Video transmitter | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenVTX.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Remote ID module | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRemoteID.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [Charger](https://github.com/OpenDrone-hw/Charger) | LiPo charger | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/Charger.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |

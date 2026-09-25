@@ -8,27 +8,27 @@
 
 ---
 
-> <picture>
->   <source media="(prefers-color-scheme: dark)" srcset="profile/incutec-ondark.svg">
->   <img src="profile/incutec-onlight.svg" alt="incutec" width="150">
-> </picture>
->
-> A startup in Belgium. Incutec started OpenDrone, but
-> the project is not owned by us: the designs are open and the direction belongs
-> to the people.
->
-> Our intent is to sell the products of OpenDrone and use those profits to
->
-> **A** &nbsp; Invest in development by ordering samples, testing, providing foundational hardware to build from
->
-> **B** &nbsp; Invest in manufacturing, detailed on [opendrone.be/production](https://opendrone.be/production)
->
-> Incutec handles: production, quality control, sourcing parts, building supply
-> chains, putting things in a box with accessories and shipping it, and the legal
-> responsibility for a product sold.
->
-> The company needs revenue, this is how it is different from code repositories.
-> But if Incutec disappears tomorrow, OpenDrone lives on.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile/incutec-ondark.svg">
+  <img src="profile/incutec-onlight.svg" alt="incutec" width="150">
+</picture>
+
+A startup in Belgium. Incutec started OpenDrone, but
+the project is not owned by us: the designs are open and the direction belongs
+to the people.
+
+Our intent is to sell the products of OpenDrone and use those profits to
+
+**A** &nbsp; Invest in development by ordering samples, testing, providing foundational hardware to build from
+
+**B** &nbsp; Invest in manufacturing, detailed on [opendrone.be/production](https://opendrone.be/production)
+
+Incutec handles: production, quality control, sourcing parts, building supply
+chains, putting things in a box with accessories and shipping it, and the legal
+responsibility for a product sold.
+
+The company needs revenue, this is how it is different from code repositories.
+But if Incutec disappears tomorrow, OpenDrone lives on.
 
 ## Why Contribute?
 
@@ -70,9 +70,9 @@ The firmware is not ours but just like the hardware, it's Open Source. Here's th
 
 ## How to contribute
 
-> You don't need permission. Have fun. Just communicate what you're up to. We trust
-> in the idea that this will stabilise in a feedback loop where designs are iterated on
-> and developed in a democratic, distributed way. If you see something you think you can improve, do it!
+You don't need permission. Have fun. Just communicate what you're up to. We trust
+in the idea that this will stabilise in a feedback loop where designs are iterated on
+and developed in a democratic, distributed way. If you see something you think you can improve, do it!
 
 **1. Say it on Discord.** What you want to change. Someone may
 already be on it, might have experience or good ideas.
@@ -107,8 +107,8 @@ how far along that is. It drives the roadmap on opendrone.be, and more: see
 |---|---|---|---|---|
 | 1 | [Planned](#1-planned) | no | The specification | Research, parts, opinions |
 | 2 | [In progress](#2-in-progress) | no | The design | Drawing, review |
-| 3 | [Alpha](#3-alpha) | no, sign-up only | The board | Flying it, breaking it |
-| 4 | [Beta](#4-beta) | yes, priced | The product | Reports from real use |
+| 3 | [Alpha](#3-alpha) | preorder only | The board | Flying it, breaking it |
+| 4 | [Beta](#4-beta) | yes, first batch | The product | Reports from real use |
 | 5 | [Launched](#5-launched) | yes | All of it | Revisions |
 
 > [!NOTE]
@@ -265,7 +265,7 @@ Read about OpenDrone's longer-term
     └── tools/         # board-specific scripts only
 ```
 
-**Mechanical.** Example: [OpenFrame](https://github.com/OpenDrone-hw/OpenFrame). One directory per size or variant, holding the CAD source, the STEP files and the drawings. 
+**Mechanical.** Example: OpenFrame. One directory per size or variant, holding the CAD source, the STEP files and the drawings. 
 
 **Fixtures, jigs and test boards** go in
 [OpenDrone-Fixtures](https://github.com/OpenDrone-hw/OpenDrone-Fixtures).
@@ -290,9 +290,10 @@ dumps, and vendor-specific agent files.
 
 ## 3. Alpha
 
-Produced. Community testers and firmware maintainers.
-Not on sale: the product page carries no price, only a sign-up to be told when
-it goes on sale. Ask a sample if you'd like to help test.
+Produced. In community testing with testers and firmware maintainers.
+The product page may offer it as a preorder against a funding target; the
+first production batch is built when the target is met. Ask for a sample if
+you'd like to help test.
 
 `images/` gets real renders and the
 repo gets its first `rev*` tag with the fab set and STEP attached. Its parts join
@@ -310,7 +311,7 @@ and approved-finding policy are in
 
 ## 4. Beta
 
-On sale at a price, first production batch.
+On sale, first production batch.
 
 The repo is complete by now: `README.md` reads as a product page, `AGENTS.md`
 describes the board that is actually in the box. 
