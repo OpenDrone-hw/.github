@@ -53,6 +53,8 @@ So come work on it. Learn from the people already there, argue about problems in
 | Version Control | git | git, or Onshape's own versions and branches |
 | Getting access | Fork the repo | Fork the repo. Onshape documents are by invite |
 
+A repository holds design files only. Sourcing (suppliers, prices, quotes, RFQs, contacts) is handled by Incutec and never lives in OpenDrone repositories.
+
 New to the tools? Explore their documentation here.
 
 [![KiCad](https://img.shields.io/badge/KiCad-10-314CB0?logo=kicad&logoColor=white)](https://www.kicad.org/)
