@@ -32,18 +32,21 @@ Hardware is CERN-OHL-S-2.0. Status is the `status-*` topic on each repository, t
 | [OpenRX-Lite-UFL](https://github.com/OpenDrone-hw/OpenRX-Lite-UFL) | 2.4 GHz ExpressLRS receiver, U.FL antenna | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRX-Lite-UFL.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) | Preorder, March 2027 batch |
 | [OpenRX-Mono](https://github.com/OpenDrone-hw/OpenRX-Mono) | Dual-band ExpressLRS receiver, one LR1121 radio, one U.FL antenna | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRX-Mono.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) | Preorder, March 2027 batch |
 | [OpenRX-Gemini](https://github.com/OpenDrone-hw/OpenRX-Gemini) | Dual-radio, dual-band ExpressLRS receiver for Gemini and Xrossband | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRX-Gemini.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) | Preorder, March 2027 batch |
-| OpenFrame | CNC carbon fibre frames, 3" and 5". No public repository | alpha | Preorder, March 2027 batch |
+| [OpenFrame-3F](https://github.com/OpenDrone-hw/OpenFrame-3F) | CNC carbon fibre freestyle frame, 3" | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenFrame-3F.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) | Preorder, March 2027 batch |
+| OpenFrame-5F | CNC carbon fibre freestyle frame, 5". No public repository yet | alpha | Preorder, March 2027 batch |
 | OpenMotor | OEM brushless motors. No repository | alpha | Preorder, March 2027 batch |
 
 ### Designs in progress, not sold
 
 | Repo | What it is | Status |
 |---|---|---|
-| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | Open-source AIO flight controller (FC + 4-in-1 ESC + ELRS RX) | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
-| [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | Whoop-size AIO (FC + Bluejay ESC + ELRS RX) | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO-Whoop.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
-| [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Open-source FPV video transmitter | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenVTX.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
-| [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Open-source drone Remote ID hardware | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRemoteID.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenAIO](https://github.com/OpenDrone-hw/OpenAIO) | Open-source AIO for 2-6S toothpick quads: flight controller, 4-in-1 AM32 ESC and ExpressLRS receiver, 25.5x25.5 mm | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenAIO-Whoop](https://github.com/OpenDrone-hw/OpenAIO-Whoop) | 1S whoop AIO: flight controller, 4-channel brushless ESC, ExpressLRS receiver and analog VTX, 25.5x25.5 mm | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO-Whoop.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenVTX](https://github.com/OpenDrone-hw/OpenVTX) | Open-source 5.8 GHz analog video transmitter with software-defined OSD (RTC6705, STM32G4). Early stage, no schematic yet | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenVTX.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenRemoteID](https://github.com/OpenDrone-hw/OpenRemoteID) | Open hardware concept for a standalone Remote ID module: ESP32-C3 plus GNSS receiver. Incomplete, not a compliant product | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenRemoteID.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
 | [Charger](https://github.com/OpenDrone-hw/Charger) | Distributed USB-C LiPo charger for FPV packs. Specification only | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/Charger.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenGPS](https://github.com/OpenDrone-hw/OpenGPS) | GPS board. Planned, no design yet, help wanted | [![status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenGPS.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project) |
+| [OpenLED](https://github.com/BinaryHippie/OpenLED) | Arm LED board, 4x WS2812B. Lives in a contributor's account, not the org. CERN-OHL-S-2.0 | planned |
 
 ### Shared
 
