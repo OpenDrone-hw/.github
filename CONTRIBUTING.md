@@ -386,7 +386,7 @@ stop clones but for everybody to share their improvements.
 GitHub does not auto-detect CERN-OHL-S, so it reports our repos as
 `NOASSERTION`. The `LICENSE` file at the repo root is the authoritative text.
 
-**Names.** *incutec* is a registered trademark. *OpenDrone* is not.
+**Names.** *incutec* is a trademark. *OpenDrone* is not.
 So: build the designs, sell them, call them what
 you like. What you cannot do is present your product as an official incutec
 product, or use incutec branding in a way that suggests we made, tested or
