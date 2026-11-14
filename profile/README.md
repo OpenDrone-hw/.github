@@ -58,7 +58,6 @@ Hardware is CERN-OHL-S-2.0. Status is the `status-*` topic on each repository, t
 | [OpenDrone-Fixtures](https://github.com/OpenDrone-hw/OpenDrone-Fixtures) | Test fixtures, flashing jigs and bench boards |
 | [OpenDrone-Brand](https://github.com/OpenDrone-hw/OpenDrone-Brand) | Logos, colour tokens and usage rules, plus the generator |
 | [OpenDrone-Web](https://github.com/OpenDrone-hw/OpenDrone-Web) | The opendrone.be storefront |
-| [chatfpv](https://github.com/OpenDrone-hw/chatfpv) | FPV assistant with OpenDrone hardware knowledge |
 | [discord](https://github.com/OpenDrone-hw/discord) | Configuration as code and bot for the OpenDrone Discord server |
 
 ## Firmware
@@ -66,11 +65,12 @@ Hardware is CERN-OHL-S-2.0. Status is the `status-*` topic on each repository, t
 If it ain't broke, don't fix it. The boards run
 [Betaflight](https://github.com/betaflight/betaflight),
 [AM32](https://github.com/am32-firmware/AM32) and
-[ExpressLRS](https://github.com/ExpressLRS/ExpressLRS)
+[ExpressLRS](https://github.com/ExpressLRS/ExpressLRS).
+Our forks of those projects in this org carry the OpenDrone board targets and fixes.
 
 ## Licensing and certification
 
-Hardware is **CERN-OHL-S-2.0**: fork it, sell it, but publish your changes. Firmware is not part of these repositories; the boards run the upstream projects above under their own licences.
+Hardware is **CERN-OHL-S-2.0**: fork it, sell it, but publish your changes. Firmware keeps its upstream licence.
 
 OSHWA certified open source hardware: 
 [OpenFC-Lite](https://certification.oshwa.org/be000026.html),
