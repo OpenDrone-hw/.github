@@ -293,8 +293,8 @@ dumps, and vendor-specific agent files.
 ## 3. Alpha
 
 Produced. In community testing with testers and firmware maintainers.
-The product page may offer it as a preorder against a funding target; the
-first production batch is built when the target is met. Ask for a sample if
+The product page may offer it as a preorder; preorders ship in production
+batches with the ship-by date shown at checkout. Ask for a sample if
 you'd like to help test.
 
 `images/` gets real renders and the
